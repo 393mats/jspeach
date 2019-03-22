@@ -1,0 +1,7 @@
+node-modules/
+vdata/
+*.GIF
+*.json
+memo.txt
+parse.js
+hello.js

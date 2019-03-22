@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jspeach Demo</title>
+</head>
+<body>
+    <h2>Jspeachβ</h2>
+    <p>濁点半濁点、ピッチ変更には未対応。データ元は初音ミク</p>
+    <input id="playtxt" type="text" style="width:300px;" value="てすとてすと、こんにちわ">
+    <button id="playbtn">Speech</button>
+
+    <script src="jspeach.js"></script>
+    <script>
+        const playtxt = document.getElementById('playtxt');
+        const playbtn = document.getElementById('playbtn');
+
+        const jspeach = new Jspeach("ja", "./vdata/");
+
+        playbtn.addEventListener('click', function(){
+
+            jspeach.speech(playtxt.value, 170); // Speach
+            // jspeach.playSound(1);
+            console.log("Play");
+        });
+    </script>
+</body>
+</html>
+
